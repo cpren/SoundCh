@@ -15,36 +15,22 @@
           </block>
         </value>
         <next>
-          <block type="controls_whileUntil" id="52" inline="false">
-            <field name="MODE">WHILE</field>
-            <value name="NUMBER">
-              <block type="logic_compare" id="140" inline="true">
-                <field name="OP">EQ</field>
-                <value name="A">
-                  <block type="math_number" id="141">
-                    <field name="NUM">1</field>
+          <block type="oled_drawtext" id="190">
+            <field name="TEXT">&gt;</field>
+            <next>
+              <block type="controls_whileUntil" id="52" inline="false">
+                <field name="MODE">WHILE</field>
+                <value name="NUMBER">
+                  <block type="sensor_button" id="38">
+                    <field name="OBJECT">RIGHT</field>
                   </block>
                 </value>
-                <value name="B">
-                  <block type="math_number" id="142">
-                    <field name="NUM">1</field>
-                  </block>
-                </value>
-              </block>
-            </value>
-            <statement name="DO">
-              <block type="oled_cleardisplay" id="15">
-                <next>
-                  <block type="oled_drawtext" id="24">
-                    <field name="TEXT">&gt;</field>
+                <statement name="DO">
+                  <block type="oled_cleardisplay" id="15">
                     <next>
-                      <block type="controls_if" id="31" inline="false">
-                        <value name="IF0">
-                          <block type="sensor_button" id="38">
-                            <field name="OBJECT">RIGHT</field>
-                          </block>
-                        </value>
-                        <statement name="DO0">
+                      <block type="oled_drawtext" id="24">
+                        <field name="TEXT">&gt;</field>
+                        <next>
                           <block type="multimedia_playwav" id="45">
                             <field name="WAV">meemeep.wav</field>
                             <next>
@@ -82,23 +68,13 @@
                               </block>
                             </next>
                           </block>
-                        </statement>
-                        <next>
-                          <block type="variables_set" id="180" inline="true">
-                            <field name="VAR">xpos</field>
-                            <value name="VALUE">
-                              <block type="variables_get" id="189">
-                                <field name="VAR">xpos</field>
-                              </block>
-                            </value>
-                          </block>
                         </next>
                       </block>
                     </next>
                   </block>
-                </next>
+                </statement>
               </block>
-            </statement>
+            </next>
           </block>
         </next>
       </block>
