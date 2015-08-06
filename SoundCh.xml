@@ -83,6 +83,16 @@
                             </next>
                           </block>
                         </statement>
+                        <next>
+                          <block type="variables_set" id="180" inline="true">
+                            <field name="VAR">xpos</field>
+                            <value name="VALUE">
+                              <block type="variables_get" id="189">
+                                <field name="VAR">xpos</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
                       </block>
                     </next>
                   </block>
