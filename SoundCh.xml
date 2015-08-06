@@ -28,41 +28,41 @@
                 <statement name="DO">
                   <block type="oled_cleardisplay" id="15">
                     <next>
-                      <block type="oled_drawtext" id="24">
-                        <field name="TEXT">&gt;</field>
+                      <block type="multimedia_playwav" id="45">
+                        <field name="WAV">meemeep.wav</field>
                         <next>
-                          <block type="multimedia_playwav" id="45">
-                            <field name="WAV">meemeep.wav</field>
+                          <block type="oled_setcursor" id="76" inline="true">
+                            <value name="STARTX">
+                              <block type="variables_get" id="122">
+                                <field name="VAR">xpos</field>
+                              </block>
+                            </value>
+                            <value name="STARTY">
+                              <block type="variables_get" id="133">
+                                <field name="VAR">ypos</field>
+                              </block>
+                            </value>
                             <next>
-                              <block type="oled_setcursor" id="76" inline="true">
-                                <value name="STARTX">
-                                  <block type="variables_get" id="122">
-                                    <field name="VAR">xpos</field>
-                                  </block>
-                                </value>
-                                <value name="STARTY">
-                                  <block type="variables_get" id="133">
-                                    <field name="VAR">ypos</field>
+                              <block type="variables_set" id="162" inline="true">
+                                <field name="VAR">xpos</field>
+                                <value name="VALUE">
+                                  <block type="math_arithmetic" id="175" inline="true">
+                                    <field name="OP">ADD</field>
+                                    <value name="A">
+                                      <block type="variables_get" id="168">
+                                        <field name="VAR">xpos</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="math_number" id="176">
+                                        <field name="NUM">1</field>
+                                      </block>
+                                    </value>
                                   </block>
                                 </value>
                                 <next>
-                                  <block type="variables_set" id="162" inline="true">
-                                    <field name="VAR">xpos</field>
-                                    <value name="VALUE">
-                                      <block type="math_arithmetic" id="175" inline="true">
-                                        <field name="OP">ADD</field>
-                                        <value name="A">
-                                          <block type="variables_get" id="168">
-                                            <field name="VAR">xpos</field>
-                                          </block>
-                                        </value>
-                                        <value name="B">
-                                          <block type="math_number" id="176">
-                                            <field name="NUM">1</field>
-                                          </block>
-                                        </value>
-                                      </block>
-                                    </value>
+                                  <block type="oled_drawtext" id="24">
+                                    <field name="TEXT">&gt;</field>
                                   </block>
                                 </next>
                               </block>
