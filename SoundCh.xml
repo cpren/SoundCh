@@ -15,98 +15,80 @@
           </block>
         </value>
         <next>
-          <block type="oled_setcursor" id="67" inline="true">
-            <value name="STARTX">
-              <block type="variables_get" id="103">
-                <field name="VAR">xpos</field>
-              </block>
-            </value>
-            <value name="STARTY">
-              <block type="variables_get" id="109">
-                <field name="VAR">ypos</field>
-              </block>
-            </value>
-            <next>
-              <block type="controls_whileUntil" id="52" inline="false">
-                <field name="MODE">WHILE</field>
-                <value name="NUMBER">
-                  <block type="logic_compare" id="140" inline="true">
-                    <field name="OP">EQ</field>
-                    <value name="A">
-                      <block type="math_number" id="141">
-                        <field name="NUM">1</field>
-                      </block>
-                    </value>
-                    <value name="B">
-                      <block type="math_number" id="142">
-                        <field name="NUM">1</field>
-                      </block>
-                    </value>
+          <block type="controls_whileUntil" id="52" inline="false">
+            <field name="MODE">WHILE</field>
+            <value name="NUMBER">
+              <block type="logic_compare" id="140" inline="true">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="math_number" id="141">
+                    <field name="NUM">1</field>
                   </block>
                 </value>
-                <statement name="DO">
-                  <block type="oled_cleardisplay" id="15">
+                <value name="B">
+                  <block type="math_number" id="142">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="oled_cleardisplay" id="15">
+                <next>
+                  <block type="oled_drawtext" id="24">
+                    <field name="TEXT">&gt;</field>
                     <next>
-                      <block type="oled_drawtext" id="24">
-                        <field name="TEXT">&gt;</field>
-                        <next>
-                          <block type="controls_if" id="31" inline="false">
-                            <value name="IF0">
-                              <block type="sensor_button" id="38">
-                                <field name="OBJECT">RIGHT</field>
-                              </block>
-                            </value>
-                            <statement name="DO0">
-                              <block type="multimedia_playwav" id="45">
-                                <field name="WAV">meemeep.wav</field>
+                      <block type="controls_if" id="31" inline="false">
+                        <value name="IF0">
+                          <block type="sensor_button" id="38">
+                            <field name="OBJECT">RIGHT</field>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="multimedia_playwav" id="45">
+                            <field name="WAV">meemeep.wav</field>
+                            <next>
+                              <block type="oled_setcursor" id="76" inline="true">
+                                <value name="STARTX">
+                                  <block type="variables_get" id="122">
+                                    <field name="VAR">xpos</field>
+                                  </block>
+                                </value>
+                                <value name="STARTY">
+                                  <block type="variables_get" id="133">
+                                    <field name="VAR">ypos</field>
+                                  </block>
+                                </value>
                                 <next>
-                                  <block type="oled_setcursor" id="76" inline="true">
-                                    <value name="STARTX">
-                                      <block type="math_arithmetic" id="116" inline="true">
+                                  <block type="variables_set" id="162" inline="true">
+                                    <field name="VAR">xpos</field>
+                                    <value name="VALUE">
+                                      <block type="math_arithmetic" id="175" inline="true">
                                         <field name="OP">ADD</field>
                                         <value name="A">
-                                          <block type="variables_get" id="122">
+                                          <block type="variables_get" id="168">
                                             <field name="VAR">xpos</field>
                                           </block>
                                         </value>
                                         <value name="B">
-                                          <block type="math_number" id="129">
+                                          <block type="math_number" id="176">
                                             <field name="NUM">1</field>
                                           </block>
                                         </value>
                                       </block>
                                     </value>
-                                    <value name="STARTY">
-                                      <block type="variables_get" id="133">
-                                        <field name="VAR">ypos</field>
-                                      </block>
-                                    </value>
                                   </block>
                                 </next>
                               </block>
-                            </statement>
-                            <next>
-                              <block type="oled_setcursor" id="143" inline="true">
-                                <value name="STARTX">
-                                  <block type="variables_get" id="144">
-                                    <field name="VAR">xpos</field>
-                                  </block>
-                                </value>
-                                <value name="STARTY">
-                                  <block type="variables_get" id="145">
-                                    <field name="VAR">ypos</field>
-                                  </block>
-                                </value>
-                              </block>
                             </next>
                           </block>
-                        </next>
+                        </statement>
                       </block>
                     </next>
                   </block>
-                </statement>
+                </next>
               </block>
-            </next>
+            </statement>
           </block>
         </next>
       </block>
