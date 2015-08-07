@@ -113,6 +113,74 @@
                                     </next>
                                   </block>
                                 </statement>
+                                <next>
+                                  <block type="controls_if" id="40" inline="false">
+                                    <value name="IF0">
+                                      <block type="sensor_button" id="41">
+                                        <field name="OBJECT">UP</field>
+                                      </block>
+                                    </value>
+                                    <statement name="DO0">
+                                      <block type="multimedia_playwav" id="42">
+                                        <field name="WAV">meemeep.wav</field>
+                                        <next>
+                                          <block type="variables_set" id="43" inline="true">
+                                            <field name="VAR">ypos</field>
+                                            <value name="VALUE">
+                                              <block type="math_arithmetic" id="44" inline="true">
+                                                <field name="OP">ADD</field>
+                                                <value name="A">
+                                                  <block type="variables_get" id="45">
+                                                    <field name="VAR">ypos</field>
+                                                  </block>
+                                                </value>
+                                                <value name="B">
+                                                  <block type="math_number" id="46">
+                                                    <field name="NUM">1</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </statement>
+                                    <next>
+                                      <block type="controls_if" id="47" inline="false">
+                                        <value name="IF0">
+                                          <block type="sensor_button" id="48">
+                                            <field name="OBJECT">DOWN</field>
+                                          </block>
+                                        </value>
+                                        <statement name="DO0">
+                                          <block type="multimedia_playwav" id="49">
+                                            <field name="WAV">meemeep.wav</field>
+                                            <next>
+                                              <block type="variables_set" id="50" inline="true">
+                                                <field name="VAR">ypos</field>
+                                                <value name="VALUE">
+                                                  <block type="math_arithmetic" id="51" inline="true">
+                                                    <field name="OP">MINUS</field>
+                                                    <value name="A">
+                                                      <block type="variables_get" id="52">
+                                                        <field name="VAR">ypos</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="B">
+                                                      <block type="math_number" id="53">
+                                                        <field name="NUM">1</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </statement>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
                               </block>
                             </next>
                           </block>
