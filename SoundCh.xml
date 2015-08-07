@@ -128,7 +128,7 @@
                                             <field name="VAR">ypos</field>
                                             <value name="VALUE">
                                               <block type="math_arithmetic" id="44" inline="true">
-                                                <field name="OP">ADD</field>
+                                                <field name="OP">MINUS</field>
                                                 <value name="A">
                                                   <block type="variables_get" id="45">
                                                     <field name="VAR">ypos</field>
@@ -160,7 +160,7 @@
                                                 <field name="VAR">ypos</field>
                                                 <value name="VALUE">
                                                   <block type="math_arithmetic" id="51" inline="true">
-                                                    <field name="OP">MINUS</field>
+                                                    <field name="OP">ADD</field>
                                                     <value name="A">
                                                       <block type="variables_get" id="52">
                                                         <field name="VAR">ypos</field>
