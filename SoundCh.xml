@@ -51,7 +51,6 @@
                         </value>
                         <next>
                           <block type="controls_if" id="10" inline="false">
-                            <mutation else="1"></mutation>
                             <value name="IF0">
                               <block type="sensor_button" id="11">
                                 <field name="OBJECT">RIGHT</field>
@@ -82,6 +81,40 @@
                                 </next>
                               </block>
                             </statement>
+                            <next>
+                              <block type="controls_if" id="30" inline="false">
+                                <value name="IF0">
+                                  <block type="sensor_button" id="31">
+                                    <field name="OBJECT">LEFT</field>
+                                  </block>
+                                </value>
+                                <statement name="DO0">
+                                  <block type="multimedia_playwav" id="32">
+                                    <field name="WAV">meemeep.wav</field>
+                                    <next>
+                                      <block type="variables_set" id="33" inline="true">
+                                        <field name="VAR">xpos</field>
+                                        <value name="VALUE">
+                                          <block type="math_arithmetic" id="34" inline="true">
+                                            <field name="OP">MINUS</field>
+                                            <value name="A">
+                                              <block type="variables_get" id="35">
+                                                <field name="VAR">xpos</field>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <block type="math_number" id="36">
+                                                <field name="NUM">1</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </statement>
+                              </block>
+                            </next>
                           </block>
                         </next>
                       </block>
