@@ -33,145 +33,145 @@
               </block>
             </value>
             <statement name="DO">
-              <block type="oled_cleardisplay" id="12">
+              <block type="oled_cleardisplay" id="9">
                 <next>
-                  <block type="oled_drawtext" id="9">
+                  <block type="oled_drawtext" id="10">
                     <field name="TEXT">&gt;</field>
                     <next>
-                      <block type="oled_setcursor" id="14" inline="true">
+                      <block type="oled_setcursor" id="11" inline="true">
                         <value name="STARTX">
-                          <block type="variables_get" id="15">
+                          <block type="variables_get" id="12">
                             <field name="VAR">xpos</field>
                           </block>
                         </value>
                         <value name="STARTY">
-                          <block type="variables_get" id="16">
+                          <block type="variables_get" id="13">
                             <field name="VAR">ypos</field>
                           </block>
                         </value>
                         <next>
-                          <block type="controls_if" id="10" inline="false">
+                          <block type="controls_if" id="14" inline="false">
                             <value name="IF0">
-                              <block type="sensor_button" id="11">
+                              <block type="sensor_button" id="15">
                                 <field name="OBJECT">RIGHT</field>
                               </block>
                             </value>
                             <statement name="DO0">
-                              <block type="variables_set" id="17" inline="true">
+                              <block type="variables_set" id="16" inline="true">
                                 <field name="VAR">xpos</field>
                                 <value name="VALUE">
-                                  <block type="math_arithmetic" id="18" inline="true">
+                                  <block type="math_arithmetic" id="17" inline="true">
                                     <field name="OP">ADD</field>
                                     <value name="A">
-                                      <block type="variables_get" id="19">
+                                      <block type="variables_get" id="18">
                                         <field name="VAR">xpos</field>
                                       </block>
                                     </value>
                                     <value name="B">
-                                      <block type="math_number" id="20">
+                                      <block type="math_number" id="19">
                                         <field name="NUM">1</field>
                                       </block>
                                     </value>
                                   </block>
                                 </value>
                                 <next>
-                                  <block type="multimedia_playwav" id="13">
+                                  <block type="multimedia_playwav" id="20">
                                     <field name="WAV">meemeep.wav</field>
                                   </block>
                                 </next>
                               </block>
                             </statement>
                             <next>
-                              <block type="controls_if" id="30" inline="false">
+                              <block type="controls_if" id="21" inline="false">
                                 <value name="IF0">
-                                  <block type="sensor_button" id="31">
+                                  <block type="sensor_button" id="22">
                                     <field name="OBJECT">LEFT</field>
                                   </block>
                                 </value>
                                 <statement name="DO0">
-                                  <block type="variables_set" id="33" inline="true">
+                                  <block type="variables_set" id="23" inline="true">
                                     <field name="VAR">xpos</field>
                                     <value name="VALUE">
-                                      <block type="math_arithmetic" id="34" inline="true">
+                                      <block type="math_arithmetic" id="24" inline="true">
                                         <field name="OP">MINUS</field>
                                         <value name="A">
-                                          <block type="variables_get" id="35">
+                                          <block type="variables_get" id="25">
                                             <field name="VAR">xpos</field>
                                           </block>
                                         </value>
                                         <value name="B">
-                                          <block type="math_number" id="36">
+                                          <block type="math_number" id="26">
                                             <field name="NUM">1</field>
                                           </block>
                                         </value>
                                       </block>
                                     </value>
                                     <next>
-                                      <block type="multimedia_playwav" id="32">
+                                      <block type="multimedia_playwav" id="27">
                                         <field name="WAV">meemeep.wav</field>
                                       </block>
                                     </next>
                                   </block>
                                 </statement>
                                 <next>
-                                  <block type="controls_if" id="40" inline="false">
+                                  <block type="controls_if" id="28" inline="false">
                                     <value name="IF0">
-                                      <block type="sensor_button" id="41">
+                                      <block type="sensor_button" id="29">
                                         <field name="OBJECT">UP</field>
                                       </block>
                                     </value>
                                     <statement name="DO0">
-                                      <block type="variables_set" id="43" inline="true">
+                                      <block type="variables_set" id="30" inline="true">
                                         <field name="VAR">ypos</field>
                                         <value name="VALUE">
-                                          <block type="math_arithmetic" id="44" inline="true">
+                                          <block type="math_arithmetic" id="31" inline="true">
                                             <field name="OP">MINUS</field>
                                             <value name="A">
-                                              <block type="variables_get" id="45">
+                                              <block type="variables_get" id="32">
                                                 <field name="VAR">ypos</field>
                                               </block>
                                             </value>
                                             <value name="B">
-                                              <block type="math_number" id="46">
+                                              <block type="math_number" id="33">
                                                 <field name="NUM">1</field>
                                               </block>
                                             </value>
                                           </block>
                                         </value>
                                         <next>
-                                          <block type="multimedia_playwav" id="42">
+                                          <block type="multimedia_playwav" id="34">
                                             <field name="WAV">meemeep.wav</field>
                                           </block>
                                         </next>
                                       </block>
                                     </statement>
                                     <next>
-                                      <block type="controls_if" id="47" inline="false">
+                                      <block type="controls_if" id="35" inline="false">
                                         <value name="IF0">
-                                          <block type="sensor_button" id="48">
+                                          <block type="sensor_button" id="36">
                                             <field name="OBJECT">DOWN</field>
                                           </block>
                                         </value>
                                         <statement name="DO0">
-                                          <block type="variables_set" id="50" inline="true">
+                                          <block type="variables_set" id="37" inline="true">
                                             <field name="VAR">ypos</field>
                                             <value name="VALUE">
-                                              <block type="math_arithmetic" id="51" inline="true">
+                                              <block type="math_arithmetic" id="38" inline="true">
                                                 <field name="OP">ADD</field>
                                                 <value name="A">
-                                                  <block type="variables_get" id="52">
+                                                  <block type="variables_get" id="39">
                                                     <field name="VAR">ypos</field>
                                                   </block>
                                                 </value>
                                                 <value name="B">
-                                                  <block type="math_number" id="53">
+                                                  <block type="math_number" id="40">
                                                     <field name="NUM">1</field>
                                                   </block>
                                                 </value>
                                               </block>
                                             </value>
                                             <next>
-                                              <block type="multimedia_playwav" id="49">
+                                              <block type="multimedia_playwav" id="41">
                                                 <field name="WAV">meemeep.wav</field>
                                               </block>
                                             </next>
